@@ -10,7 +10,7 @@ from pdb import set_trace as stx
 import numbers
 
 from einops import rearrange
-
+from vision_lstm.vision_lstm2 import *
 
 
 ##########################################################################
@@ -202,7 +202,7 @@ class Restormer(nn.Module):
         bias = False,
         LayerNorm_type = 'WithBias',   ## Other option 'BiasFree'
         dual_pixel_task = False,        ## True for dual-pixel defocus deblurring only. Also set inp_channels=6
-        conv_type="causal1d"
+        conv_type="2d"
     ):
 
         super(Restormer, self).__init__()
